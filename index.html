@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashgrove Merritt LLP | Attorneys in Boston and Providence</title>
+<meta name="description" content="Ashgrove Merritt LLP is a 24-attorney law firm in Boston, MA and Providence, RI practicing business, employment, family, real estate, estate planning and criminal defense law since 1998.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16202A;
+  --paper:#F5F6F3;
+  --green:#1E4D44;
+  --green-deep:#163A33;
+  --brass:#A8834A;
+  --mist:#DCE3DE;
+  --rule:#C9D1CC;
+  --muted:#4F5B63;
+  --display:"Libre Caslon Display", "Georgia", "Times New Roman", serif;
+  --body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;letter-spacing:-.005em}
+h2{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:18px}
+h3{font-size:1.55rem}
+p{max-width:68ch}
+.lede{font-size:1.15rem;color:var(--muted);max-width:60ch}
+section{padding:104px 0;border-top:1px solid var(--rule)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 14px;z-index:100}
+.skip:focus{left:8px}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(245,246,243,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.brand{font-family:var(--display);font-size:1.45rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand small{font-family:var(--body);font-size:.78rem;color:var(--muted);margin-left:6px}
+.nav ul{display:flex;gap:26px;list-style:none}
+.nav ul a{color:var(--ink);text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--green);text-decoration:underline;text-underline-offset:5px}
+.btn{display:inline-block;font-family:var(--body);font-weight:600;font-size:.95rem;text-decoration:none;padding:12px 20px;border-radius:2px;border:1.5px solid var(--green);background:var(--green);color:#fff;cursor:pointer}
+.btn:hover{background:var(--green-deep)}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn.ghost:hover{background:var(--mist)}
+.menu-toggle{display:none;background:none;border:1.5px solid var(--ink);padding:8px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+
+/* Hero */
+.hero{padding:88px 0 96px;border-top:none}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:start}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin-bottom:28px}
+.hero .lede{margin-bottom:34px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);gap:28px;justify-content:start;border-top:1px solid var(--rule);padding-top:24px}
+.facts dt{font-size:.85rem;color:var(--muted)}
+.facts dd{font-family:var(--display);font-size:1.9rem}
+
+.finder{background:var(--green);color:#fff;padding:34px 32px 30px;border-radius:2px;box-shadow:12px 12px 0 var(--mist)}
+.finder h2{font-size:1.9rem;margin-bottom:8px}
+.finder p.sub{color:#CFE0DA;font-size:.95rem;margin-bottom:22px}
+.finder fieldset{border:none}
+.finder legend{position:absolute;left:-999px}
+.opts{display:grid;gap:8px}
+.opts button{font:inherit;font-size:.96rem;text-align:left;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);padding:11px 14px;border-radius:2px;cursor:pointer}
+.opts button:hover{border-color:#fff}
+.opts button[aria-pressed="true"]{background:#fff;color:var(--green);border-color:#fff;font-weight:600}
+.answer{margin-top:20px;border-top:1px solid rgba(255,255,255,.3);padding-top:18px;min-height:132px}
+.answer h3{font-size:1.4rem;margin-bottom:6px}
+.answer p{font-size:.95rem;color:#E6EFEC}
+.answer a{color:#fff;font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  .answer.show{animation:rise .35s ease-out}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.about-grid p+p{margin-top:16px}
+.timeline{list-style:none;border-left:2px solid var(--brass);padding-left:26px}
+.timeline li{position:relative;padding-bottom:22px}
+.timeline li::before{content:"";position:absolute;left:-33px;top:9px;width:12px;height:12px;background:var(--paper);border:2px solid var(--brass);border-radius:50%}
+.timeline b{font-family:var(--display);font-weight:400;font-size:1.3rem;display:block}
+
+/* Practice areas */
+.practice-list{margin-top:40px;border-top:2px solid var(--ink)}
+.practice-list details{border-bottom:1px solid var(--rule)}
+.practice-list summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 1.3fr 28px;gap:32px;align-items:baseline;padding:26px 0}
+.practice-list summary::-webkit-details-marker{display:none}
+.practice-list summary h3{font-size:1.9rem}
+.practice-list summary span.desc{color:var(--muted)}
+.practice-list summary .plus{font-family:var(--display);font-size:1.8rem;color:var(--brass);text-align:right}
+.practice-list details[open] .plus{transform:rotate(45deg)}
+.practice-body{display:grid;grid-template-columns:1fr 1.3fr 28px;gap:32px;padding:0 0 34px}
+.practice-body .meta{font-size:.95rem}
+.practice-body .meta p{margin-bottom:10px}
+.practice-body ul{columns:2;column-gap:32px;padding-left:18px}
+.practice-body li{margin-bottom:6px;break-inside:avoid}
+.note{margin-top:28px;font-size:.95rem;color:var(--muted)}
+
+/* Attorneys */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 40px;margin-top:44px}
+.person .mono{aspect-ratio:4/3;display:flex;align-items:flex-end;padding:18px;font-family:var(--display);font-size:3.4rem;color:#fff;margin-bottom:18px}
+.person:nth-child(3n+1) .mono{background:var(--green)}
+.person:nth-child(3n+2) .mono{background:var(--ink)}
+.person:nth-child(3n) .mono{background:var(--brass)}
+.person h3{margin-bottom:2px}
+.person .role{color:var(--muted);font-size:.95rem;margin-bottom:12px}
+.person p.bio{font-size:.95rem;margin-bottom:12px}
+.person dl{font-size:.88rem;display:grid;grid-template-columns:auto 1fr;gap:4px 12px}
+.person dt{color:var(--muted)}
+
+/* Results */
+.results-table{width:100%;border-collapse:collapse;margin-top:36px}
+.results-table th{text-align:left;font-weight:600;font-size:.88rem;color:var(--muted);padding:0 16px 12px 0;border-bottom:2px solid var(--ink)}
+.results-table td{padding:20px 16px 20px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.results-table td.out{font-family:var(--display);font-size:1.35rem;white-space:nowrap}
+.table-scroll{overflow-x:auto}
+.disclaimer{font-size:.85rem;color:var(--muted);margin-top:20px}
+
+/* Process */
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:28px;margin-top:44px}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:18px}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:2.4rem;color:var(--brass);display:block;line-height:1;margin-bottom:12px}
+.steps h3{font-size:1.25rem;margin-bottom:8px}
+.steps p{font-size:.93rem;color:var(--muted)}
+
+/* Fees */
+.fees-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px}
+.fee-table{width:100%;border-collapse:collapse}
+.fee-table caption{text-align:left;font-family:var(--display);font-size:1.5rem;padding-bottom:12px}
+.fee-table td{padding:12px 0;border-bottom:1px solid var(--rule)}
+.fee-table td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px}
+.fee-notes{background:var(--mist);padding:28px;margin-top:40px}
+.fee-notes h3{margin-bottom:10px}
+.fee-notes ul{padding-left:20px}
+.fee-notes li{margin-bottom:8px}
+
+/* Testimonials */
+.quotes{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-top:40px}
+blockquote{border-left:3px solid var(--brass);padding-left:22px}
+blockquote p{font-family:var(--display);font-size:1.3rem;line-height:1.35}
+.quotes blockquote:first-child p{font-size:1.75rem}
+blockquote footer{margin-top:14px;font-size:.9rem;color:var(--muted)}
+
+/* Insights */
+.insights{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
+.insights article{border-top:1px solid var(--ink);padding-top:16px}
+.insights time{font-size:.85rem;color:var(--muted)}
+.insights h3{font-size:1.35rem;margin:6px 0 10px}
+.insights p{font-size:.94rem;color:var(--muted)}
+
+/* FAQ */
+.faq{margin-top:36px;max-width:860px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;padding:20px 40px 20px 0;font-weight:600;position:relative;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-family:var(--display);font-size:1.6rem;color:var(--brass)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 22px;color:var(--muted)}
+
+/* Offices */
+.offices{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px}
+.office h3{font-size:2rem;margin-bottom:12px}
+.office address{font-style:normal;margin-bottom:16px}
+.office table{border-collapse:collapse;font-size:.95rem;width:100%;max-width:420px}
+.office td{padding:6px 0;border-bottom:1px solid var(--rule)}
+.office td:last-child{text-align:right}
+.emergency{margin-top:40px;background:var(--ink);color:#fff;padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.emergency p{color:#D7DEE3}
+.emergency a{color:#fff;font-family:var(--display);font-size:1.8rem;text-decoration:none;white-space:nowrap}
+
+/* Careers */
+.careers{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{display:block;font-size:.9rem;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:12px;border:1px solid #9AA6A0;border-radius:2px;background:#fff;color:var(--ink)}
+textarea{min-height:130px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:400}
+.check input{width:auto;margin-top:5px}
+.form-msg{grid-column:1/-1;padding:16px;background:var(--mist);border-left:3px solid var(--green);display:none}
+.form-msg.show{display:block}
+
+/* Footer */
+footer.site{background:var(--ink);color:#C9D2D8;padding:64px 0 40px;font-size:.92rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+footer.site h4{color:#fff;font-weight:600;margin-bottom:12px;font-size:.95rem}
+footer.site ul{list-style:none}
+footer.site li{margin-bottom:6px}
+footer.site a{color:#C9D2D8}
+footer.site .brand{color:#fff}
+.legal{border-top:1px solid #2E3A45;padding-top:24px;font-size:.82rem;color:#97A3AC}
+.legal p{max-width:none;margin-bottom:8px}
+
+/* Responsive */
+@media (max-width:1020px){
+  .nav ul{display:none}
+  .nav ul.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--paper);padding:20px 28px;border-bottom:1px solid var(--rule);gap:14px}
+  .menu-toggle{display:inline-block}
+  .nav .btn{display:none}
+  .hero-grid,.about-grid,.fees-grid,.offices,.contact-grid,.careers{grid-template-columns:1fr;gap:44px}
+  .team{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr 1fr}
+  .quotes,.insights{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  section{padding:72px 0}
+  .wrap{padding:0 20px}
+  .facts{grid-template-columns:repeat(2,auto)}
+  .practice-list summary{grid-template-columns:1fr 28px;gap:10px}
+  .practice-body{grid-template-columns:1fr;gap:18px}
+  .practice-body > span{display:none}
+  .practice-list summary span.desc{grid-column:1/2}
+  .practice-list summary .plus{grid-row:1;grid-column:2}
+  .practice-body ul{columns:1}
+  .team,.steps,.foot-grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  .finder{box-shadow:8px 8px 0 var(--mist)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Ashgrove Merritt <small>LLP</small></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul id="menu">
+      <li><a href="#practice">Practice areas</a></li>
+      <li><a href="#attorneys">Attorneys</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#offices">Offices</a></li>
+    </ul>
+    <a class="btn" href="#contact">Book a consultation</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Clear counsel for the decisions that change your life and your business.</h1>
+      <p class="lede">Ashgrove Merritt LLP is a 24-attorney firm with offices in Boston and Providence. Since 1998 we have represented individuals, families and growing companies across Massachusetts and Rhode Island in six practice areas.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#contact">Book a consultation</a>
+        <a class="btn ghost" href="tel:+16175550142">Call (617) 555-0142</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Founded</dt><dd>1998</dd></div>
+        <div><dt>Attorneys</dt><dd>24</dd></div>
+        <div><dt>Matters closed</dt><dd>2,800+</dd></div>
+      </dl>
+    </div>
+
+    <div class="finder" aria-labelledby="finder-title">
+      <h2 id="finder-title">Where do you need help?</h2>
+      <p class="sub">Choose what fits best and we'll point you to the right team.</p>
+      <fieldset>
+        <legend>Your situation</legend>
+        <div class="opts" id="finder-opts">
+          <button type="button" data-k="employment" aria-pressed="false">I was fired or treated unfairly at work</button>
+          <button type="button" data-k="business" aria-pressed="false">I'm starting, buying or selling a business</button>
+          <button type="button" data-k="family" aria-pressed="false">I'm divorcing or need help with custody</button>
+          <button type="button" data-k="realestate" aria-pressed="false">I'm buying, selling or leasing property</button>
+          <button type="button" data-k="estate" aria-pressed="false">I need a will or I'm handling an estate</button>
+          <button type="button" data-k="criminal" aria-pressed="false">I've been arrested or charged</button>
+          <button type="button" data-k="other" aria-pressed="false">Something else</button>
+        </div>
+      </fieldset>
+      <div class="answer" id="finder-answer" aria-live="polite">
+        <p>Your match will appear here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>A mid-sized firm that answers its own phone.</h2>
+      <p>Eleanor Ashgrove and David Merritt started the firm in a two-room office on State Street with a simple rule: every client gets a named attorney, a written plan and a reply within one business day. That rule still holds.</p>
+      <p>Today 24 attorneys, 11 paralegals and 17 support staff work from our Boston headquarters and our Providence office. We are licensed in Massachusetts and Rhode Island and admitted to practice before the U.S. District Courts for the Districts of Massachusetts and Rhode Island and the U.S. Court of Appeals for the First Circuit.</p>
+      <p>Our attorneys and staff serve clients in English, Spanish, Portuguese, French and Tamil. In 2025 the firm contributed more than 1,200 pro bono hours to local legal aid organizations.</p>
+    </div>
+    <ol class="timeline" aria-label="Firm history">
+      <li><b>1998</b>Founded in Boston by Eleanor Ashgrove and David Merritt.</li>
+      <li><b>2012</b>Criminal defense practice launched when Marcus Bell joins from the Suffolk County District Attorney's Office.</li>
+      <li><b>2014</b>Providence, Rhode Island office opens.</li>
+      <li><b>2019</b>Daniel Okafor named Managing Partner.</li>
+      <li><b>2021</b>David Merritt retires from practice and becomes Of Counsel.</li>
+      <li><b>2024</b>Boston office moves to 410 Atlantic Avenue.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="practice">
+  <div class="wrap">
+    <h2>Practice areas</h2>
+    <p class="lede">Six practices, each led by a partner or senior attorney who stays responsible for your matter from first call to close. Open any practice to see what it covers.</p>
+
+    <div class="practice-list">
+      <details>
+        <summary><h3>Business &amp; Corporate</h3><span class="desc">Formation, contracts, acquisitions and disputes for companies with up to roughly 500 employees.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Daniel Okafor</p>
+            <p><strong>Consultation:</strong> $175 for 60 minutes, credited if you hire us</p>
+            <p><strong>Flat fee example:</strong> LLC formation, $1,500</p>
+          </div>
+          <ul>
+            <li>Entity formation (LLC, S-corp, C-corp)</li>
+            <li>Operating and shareholder agreements</li>
+            <li>Mergers and acquisitions up to $50 million</li>
+            <li>Commercial contract drafting and review</li>
+            <li>Shareholder and partner disputes</li>
+            <li>Outside general counsel retainers</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+
+      <details>
+        <summary><h3>Employment Law</h3><span class="desc">For employees facing termination, discrimination or unpaid wages, and for small employers that want to get it right.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Priya Raman</p>
+            <p><strong>Consultation:</strong> Free 30-minute consultation</p>
+            <p><strong>Fees:</strong> Contingency available for discrimination and wage cases</p>
+          </div>
+          <ul>
+            <li>Wrongful termination and retaliation</li>
+            <li>Discrimination and harassment claims</li>
+            <li>Unpaid wages and overtime</li>
+            <li>Severance agreement review</li>
+            <li>Non-compete and non-solicit disputes</li>
+            <li>Employee handbooks for employers under 100 staff</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+
+      <details>
+        <summary><h3>Family Law</h3><span class="desc">Divorce, custody and agreements handled with as little conflict as the situation allows.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Margaret Lindqvist (Providence)</p>
+            <p><strong>Consultation:</strong> $175 for 60 minutes, credited if you hire us</p>
+            <p><strong>Flat fee example:</strong> Uncontested divorce, $4,500</p>
+          </div>
+          <ul>
+            <li>Contested and uncontested divorce</li>
+            <li>Child custody and parenting plans</li>
+            <li>Child and spousal support</li>
+            <li>Prenuptial and postnuptial agreements</li>
+            <li>Divorce mediation</li>
+            <li>Modification of existing orders</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+
+      <details>
+        <summary><h3>Real Estate</h3><span class="desc">Residential and commercial transactions, leasing and land use.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Tomás Herrera</p>
+            <p><strong>Consultation:</strong> $175 for 60 minutes, credited if you hire us</p>
+            <p><strong>Flat fee example:</strong> Residential closing for a buyer, $1,250</p>
+          </div>
+          <ul>
+            <li>Residential purchases and sales</li>
+            <li>Commercial acquisitions and leasing</li>
+            <li>Landlord and tenant disputes</li>
+            <li>Zoning, permitting and variances</li>
+            <li>Title issues and boundary disputes</li>
+            <li>Condominium documents</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+
+      <details>
+        <summary><h3>Estate Planning &amp; Probate</h3><span class="desc">Wills, trusts and the administration of estates after a loss.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Eleanor Ashgrove</p>
+            <p><strong>Consultation:</strong> $175 for 60 minutes, credited if you hire us</p>
+            <p><strong>Flat fee example:</strong> Simple will, $950</p>
+          </div>
+          <ul>
+            <li>Wills and revocable living trusts</li>
+            <li>Durable powers of attorney</li>
+            <li>Health care proxies</li>
+            <li>Special needs trusts</li>
+            <li>Probate and estate administration</li>
+            <li>Trust administration and disputes</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+
+      <details>
+        <summary><h3>Criminal Defense</h3><span class="desc">State and federal defense, from a first OUI to white collar investigations.</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="practice-body">
+          <div class="meta">
+            <p><strong>Lead attorney:</strong> Marcus Bell</p>
+            <p><strong>Consultation:</strong> Free 30-minute consultation</p>
+            <p><strong>Urgent help:</strong> 24/7 line, (617) 555-0199</p>
+          </div>
+          <ul>
+            <li>OUI and drunk driving charges</li>
+            <li>Drug offenses</li>
+            <li>Assault and domestic charges</li>
+            <li>White collar and fraud investigations</li>
+            <li>Probation violations</li>
+            <li>Record sealing and expungement</li>
+          </ul>
+          <span></span>
+        </div>
+      </details>
+    </div>
+    <p class="note">We do not handle personal injury, immigration, bankruptcy, patent or tax controversy matters. If you need help in one of those areas, we can suggest the Massachusetts Bar Association Lawyer Referral Service.</p>
+  </div>
+</section>
+
+<!-- ATTORNEYS -->
+<section id="attorneys">
+  <div class="wrap">
+    <h2>Practice leaders</h2>
+    <p class="lede">Each practice is led by one of these six attorneys, supported by associates and paralegals in the same group.</p>
+
+    <div class="team">
+      <article class="person">
+        <div class="mono" aria-hidden="true">DO</div>
+        <h3>Daniel Okafor</h3>
+        <p class="role">Managing Partner, Business &amp; Corporate</p>
+        <p class="bio">Daniel has led more than 140 business acquisitions and sales and has served as Managing Partner since 2019. Before joining the firm in 2010 he was a corporate associate at a large Boston firm.</p>
+        <dl><dt>Education</dt><dd>JD, Harvard Law School, 2004; BA, Tufts University</dd><dt>Admitted</dt><dd>Massachusetts</dd><dt>Languages</dt><dd>English, French</dd><dt>Office</dt><dd>Boston</dd></dl>
+      </article>
+
+      <article class="person">
+        <div class="mono" aria-hidden="true">PR</div>
+        <h3>Priya Raman</h3>
+        <p class="role">Partner, Employment Law</p>
+        <p class="bio">Priya represents employees in discrimination, retaliation and wage cases and advises small employers on policy. She secured the firm's largest jury verdict, $2.4 million, in 2023.</p>
+        <dl><dt>Education</dt><dd>JD, Northeastern University School of Law, 2009</dd><dt>Admitted</dt><dd>Massachusetts, Rhode Island</dd><dt>Languages</dt><dd>English, Tamil</dd><dt>Office</dt><dd>Boston</dd></dl>
+      </article>
+
+      <article class="person">
+        <div class="mono" aria-hidden="true">ML</div>
+        <h3>Margaret Lindqvist</h3>
+        <p class="role">Partner, Family Law</p>
+        <p class="bio">Meg leads the family law group from our Providence office. She is a trained divorce mediator and resolves most of her cases without a contested trial.</p>
+        <dl><dt>Education</dt><dd>JD, Suffolk University Law School, 2006</dd><dt>Admitted</dt><dd>Rhode Island, Massachusetts</dd><dt>Languages</dt><dd>English</dd><dt>Office</dt><dd>Providence</dd></dl>
+      </article>
+
+      <article class="person">
+        <div class="mono" aria-hidden="true">TH</div>
+        <h3>Tomás Herrera</h3>
+        <p class="role">Senior Associate, Real Estate</p>
+        <p class="bio">Tomás handles residential and commercial closings and land use approvals. He secured the 2023 zoning variance for a 40-unit housing development in Somerville.</p>
+        <dl><dt>Education</dt><dd>JD, Boston University School of Law, 2014</dd><dt>Admitted</dt><dd>Massachusetts</dd><dt>Languages</dt><dd>English, Spanish, Portuguese</dd><dt>Office</dt><dd>Boston</dd></dl>
+      </article>
+
+      <article class="person">
+        <div class="mono" aria-hidden="true">EA</div>
+        <h3>Eleanor Ashgrove</h3>
+        <p class="role">Founding Partner, Estate Planning &amp; Probate</p>
+        <p class="bio">Eleanor co-founded the firm in 1998 and has practiced estate planning for more than 30 years. She also chairs the firm's pro bono committee.</p>
+        <dl><dt>Education</dt><dd>JD, Boston College Law School, 1991</dd><dt>Admitted</dt><dd>Massachusetts, Rhode Island</dd><dt>Languages</dt><dd>English</dd><dt>Office</dt><dd>Boston</dd></dl>
+      </article>
+
+      <article class="person">
+        <div class="mono" aria-hidden="true">MB</div>
+        <h3>Marcus Bell</h3>
+        <p class="role">Partner, Criminal Defense</p>
+        <p class="bio">Marcus spent seven years as an Assistant District Attorney in Suffolk County before moving to defense work in 2012. He has tried more than 60 cases to verdict.</p>
+        <dl><dt>Education</dt><dd>JD, Georgetown University Law Center, 2005</dd><dt>Admitted</dt><dd>Massachusetts, federal courts</dd><dt>Languages</dt><dd>English</dd><dt>Office</dt><dd>Boston</dd></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="wrap">
+    <h2>Selected results</h2>
+    <p class="lede">A sample of recent matters, shared with client permission and without identifying details.</p>
+    <div class="table-scroll">
+      <table class="results-table">
+        <thead><tr><th scope="col">Outcome</th><th scope="col">Matter</th><th scope="col">Practice</th><th scope="col">Year</th></tr></thead>
+        <tbody>
+          <tr><td class="out">$2.4 million</td><td>Jury verdict for a warehouse manager terminated after reporting safety violations</td><td>Employment</td><td>2023</td></tr>
+          <tr><td class="out">$18 million</td><td>Sale of a family-owned regional HVAC company to a private buyer</td><td>Business</td><td>2024</td></tr>
+          <tr><td class="out">Dismissed</td><td>Federal wire fraud charges against a small business owner dismissed before trial</td><td>Criminal Defense</td><td>2022</td></tr>
+          <tr><td class="out">Approved</td><td>Zoning variance for a 40-unit mixed-income housing development in Somerville</td><td>Real Estate</td><td>2023</td></tr>
+          <tr><td class="out">11 months</td><td>Probate of a $12 million estate with property in two states, closed without litigation</td><td>Estate Planning</td><td>2024</td></tr>
+          <tr><td class="out">6 weeks</td><td>Contested custody dispute resolved through mediation with a shared parenting plan</td><td>Family Law</td><td>2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disclaimer">Prior results do not guarantee a similar outcome. Every case depends on its own facts and law.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <h2>How working with us starts</h2>
+    <p class="lede">From first contact to the first piece of work, most new clients are engaged within a week.</p>
+    <ol class="steps">
+      <li><h3>Contact us</h3><p>Call, use the form below or email intake. We reply within one business day.</p></li>
+      <li><h3>Conflict check</h3><p>We confirm we don't represent anyone on the other side. This takes 24 to 48 hours.</p></li>
+      <li><h3>Consultation</h3><p>Meet your attorney in person, by phone, or on Zoom or Microsoft Teams.</p></li>
+      <li><h3>Engagement</h3><p>You receive a written engagement letter with scope, fees and who will work on your matter.</p></li>
+      <li><h3>Work begins</h3><p>You get access to the client portal and an update from your attorney at least every two weeks.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FEES -->
+<section id="fees">
+  <div class="wrap">
+    <h2>Fees, in writing, before work starts</h2>
+    <p class="lede">We offer hourly, flat fee and contingency arrangements depending on the matter. Your engagement letter states which one applies.</p>
+
+    <div class="fees-grid">
+      <table class="fee-table">
+        <caption>Hourly rates</caption>
+        <tbody>
+          <tr><td>Partners</td><td>$425 to $550</td></tr>
+          <tr><td>Senior associates</td><td>$325</td></tr>
+          <tr><td>Associates</td><td>$260</td></tr>
+          <tr><td>Paralegals</td><td>$140</td></tr>
+          <tr><td>Standard retainer, hourly matters</td><td>$5,000</td></tr>
+          <tr><td>Retainer, family law matters</td><td>$7,500</td></tr>
+        </tbody>
+      </table>
+
+      <table class="fee-table">
+        <caption>Flat fees</caption>
+        <tbody>
+          <tr><td>Simple will</td><td>$950</td></tr>
+          <tr><td>Will and revocable trust package, individual</td><td>$3,200</td></tr>
+          <tr><td>Will and revocable trust package, couple</td><td>$3,900</td></tr>
+          <tr><td>LLC formation with operating agreement</td><td>$1,500</td></tr>
+          <tr><td>Residential closing, buyer</td><td>$1,250</td></tr>
+          <tr><td>Uncontested divorce</td><td>$4,500</td></tr>
+          <tr><td>First-offense OUI, through pretrial</td><td>from $5,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="fee-notes">
+      <h3>Good to know</h3>
+      <ul>
+        <li>Consultations are free for 30 minutes in Employment Law and Criminal Defense. Other practices charge $175 for a 60-minute consultation, which is credited to your first invoice if you hire us.</li>
+        <li>Employment discrimination and wage cases can be handled on contingency: 33⅓% of the recovery, or 40% if the case goes to trial. You pay nothing unless you recover.</li>
+        <li>Flat fee matters over $2,000 can be paid in up to six monthly installments with no interest.</li>
+        <li>We accept credit and debit cards, ACH bank transfer and checks.</li>
+        <li>A first-offense OUI flat fee covers representation through pretrial. Trial is quoted separately.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="clients">
+  <div class="wrap">
+    <h2>From our clients</h2>
+    <div class="quotes">
+      <blockquote><p>Priya told me on day one what my case was worth and what it would take. Two years later the verdict landed almost exactly where she said it would.</p><footer>Robert K., employment client, Boston</footer></blockquote>
+      <blockquote><p>Meg kept our divorce about our kids, not about winning. We still co-parent well.</p><footer>Ana S., family law client, Providence</footer></blockquote>
+      <blockquote><p>Daniel's team closed the sale of my father's company in four months.</p><footer>Jim T., business client, Worcester</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <div class="wrap">
+    <h2>Recent insights</h2>
+    <div class="insights">
+      <article><time datetime="2026-08-12">August 12, 2026</time><h3>What to check before signing a severance agreement</h3><p>Priya Raman on release clauses, non-disparagement terms and why the 21-day review period matters if you are over 40.</p></article>
+      <article><time datetime="2026-07-02">July 2, 2026</time><h3>Do you need a trust, or is a will enough?</h3><p>Eleanor Ashgrove explains when a revocable trust saves your family time in probate, and when it simply adds cost.</p></article>
+      <article><time datetime="2026-05-20">May 20, 2026</time><h3>Your first 48 hours after an OUI arrest</h3><p>Marcus Bell walks through license suspension timelines, the arraignment and what not to say to anyone but your lawyer.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+      <details><summary>Do you offer free consultations?</summary><p>Yes, for Employment Law and Criminal Defense: the first 30 minutes are free. All other practices charge $175 for a 60-minute consultation, and that amount is credited to your first invoice if you hire us.</p></details>
+      <details><summary>Do you handle personal injury or immigration cases?</summary><p>No. We also do not handle bankruptcy, patent or tax controversy matters. We can suggest the Massachusetts Bar Association Lawyer Referral Service for these areas.</p></details>
+      <details><summary>Can I meet my lawyer online?</summary><p>Yes. Consultations and meetings are available in person, by phone, or by video on Zoom or Microsoft Teams.</p></details>
+      <details><summary>Which states do you practice in?</summary><p>Massachusetts and Rhode Island. We also practice in the federal courts for both districts and the First Circuit Court of Appeals. We do not take matters governed by other states' law.</p></details>
+      <details><summary>How quickly will someone respond to me?</summary><p>Within one business day for calls, emails and form submissions. If you have been arrested, call our 24/7 criminal defense line at (617) 555-0199.</p></details>
+      <details><summary>Does contacting you make me a client?</summary><p>No. Contacting us through this website, by email or by phone does not create an attorney-client relationship. Please don't send confidential details until we have completed a conflict check and you have signed an engagement letter.</p></details>
+      <details><summary>Can the website assistant give me legal advice?</summary><p>No. The assistant can answer questions about the firm, our services, fees and how to get started. Advice about your situation comes only from an attorney after you are engaged.</p></details>
+      <details><summary>What languages do you speak?</summary><p>English, Spanish, Portuguese, French and Tamil. Tell us your preferred language when you contact us and we will match you with the right person.</p></details>
+      <details><summary>Can I pay in installments?</summary><p>Yes, for flat fee matters over $2,000: up to six monthly payments, no interest.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICES -->
+<section id="offices">
+  <div class="wrap">
+    <h2>Offices and hours</h2>
+    <div class="offices">
+      <div class="office">
+        <h3>Boston</h3>
+        <p>Headquarters</p>
+        <address>410 Atlantic Avenue, Suite 1200<br>Boston, MA 02110<br><a href="tel:+16175550142">(617) 555-0142</a></address>
+        <table>
+          <tbody>
+            <tr><td>Monday to Friday</td><td>8:30 am to 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>9:00 am to 1:00 pm, by appointment</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="office">
+        <h3>Providence</h3>
+        <p>Rhode Island office, opened 2014</p>
+        <address>88 Westminster Street, Suite 600<br>Providence, RI 02903<br><a href="tel:+14015550187">(401) 555-0187</a></address>
+        <table>
+          <tbody>
+            <tr><td>Monday to Friday</td><td>8:30 am to 6:00 pm</td></tr>
+            <tr><td>Saturday</td><td>Closed</td></tr>
+            <tr><td>Sunday</td><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="note">All times are Eastern. Both offices close on federal holidays.</p>
+    <div class="emergency">
+      <p>Arrested or under investigation? Our criminal defense line is answered 24 hours a day, 7 days a week.</p>
+      <a href="tel:+16175550199">(617) 555-0199</a>
+    </div>
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section id="careers">
+  <div class="wrap careers">
+    <div>
+      <h2>Careers</h2>
+      <p>We are hiring a paralegal for the Employment Law group in Boston, with at least two years of litigation experience.</p>
+      <p style="margin-top:14px">Our summer associate program takes four to six law students each year. Applications for summer 2027 close on January 31, 2027.</p>
+    </div>
+    <div>
+      <p>Send a resume and short cover letter to <a href="mailto:careers@ashgrovemerritt.com">careers@ashgrovemerritt.com</a>. We reply to every applicant within three weeks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Book a consultation</h2>
+      <p class="lede">Tell us briefly what you need. An intake coordinator will reply within one business day to schedule your consultation.</p>
+      <p style="margin-top:20px">Email <a href="mailto:intake@ashgrovemerritt.com">intake@ashgrovemerritt.com</a><br>Boston <a href="tel:+16175550142">(617) 555-0142</a><br>Providence <a href="tel:+14015550187">(401) 555-0187</a></p>
+    </div>
+    <form id="contact-form" novalidate>
+      <div><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="f-area">Practice area</label>
+        <select id="f-area" name="area">
+          <option>Business &amp; Corporate</option><option>Employment Law</option><option>Family Law</option><option>Real Estate</option><option>Estate Planning &amp; Probate</option><option>Criminal Defense</option><option>Not sure</option>
+        </select></div>
+      <div><label for="f-office">Preferred office</label>
+        <select id="f-office" name="office"><option>Boston</option><option>Providence</option><option>Video meeting</option></select></div>
+      <div class="full"><label for="f-msg">What do you need help with?</label><textarea id="f-msg" name="message" placeholder="A few sentences is enough. Please leave out confidential details for now."></textarea></div>
+      <div class="full"><label class="check"><input type="checkbox" id="f-ack" required> I understand that submitting this form does not create an attorney-client relationship.</label></div>
+      <div class="full"><button class="btn" type="submit">Send request</button></div>
+      <div class="form-msg" id="form-msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="brand" href="#top">Ashgrove Merritt LLP</a><p style="margin-top:12px">Attorneys serving Massachusetts and Rhode Island since 1998.</p></div>
+      <div><h4>Practice areas</h4><ul><li>Business &amp; Corporate</li><li>Employment Law</li><li>Family Law</li><li>Real Estate</li><li>Estate Planning &amp; Probate</li><li>Criminal Defense</li></ul></div>
+      <div><h4>Boston</h4><ul><li>410 Atlantic Avenue, Suite 1200</li><li>Boston, MA 02110</li><li>(617) 555-0142</li></ul></div>
+      <div><h4>Providence</h4><ul><li>88 Westminster Street, Suite 600</li><li>Providence, RI 02903</li><li>(401) 555-0187</li></ul></div>
+    </div>
+    <div class="legal">
+      <p>Attorney advertising. The information on this website is for general information only and is not legal advice. Contacting the firm does not create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
+      <p>&copy; 2026 Ashgrove Merritt LLP. Ashgrove Merritt LLP is a fictional firm created for testing purposes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Mobile menu
+  var toggle=document.querySelector('.menu-toggle'),menu=document.getElementById('menu');
+  toggle.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+
+  // Help finder
+  var data={
+    employment:{t:'Employment Law',p:'Priya Raman leads this team. Your first 30 minutes are free, and discrimination and wage cases can be handled on contingency.'},
+    business:{t:'Business & Corporate',p:'Daniel Okafor leads this team. Consultations are $175 for 60 minutes, credited if you hire us. LLC formation is a $1,500 flat fee.'},
+    family:{t:'Family Law',p:'Margaret Lindqvist leads this team from Providence and also meets Massachusetts clients. An uncontested divorce is a $4,500 flat fee.'},
+    realestate:{t:'Real Estate',p:'Tomás Herrera leads this team and works in English, Spanish and Portuguese. A buyer\u2019s residential closing is a $1,250 flat fee.'},
+    estate:{t:'Estate Planning & Probate',p:'Eleanor Ashgrove leads this team. A simple will is $950, and a will and trust package starts at $3,200.'},
+    criminal:{t:'Criminal Defense',p:'Marcus Bell leads this team. If you have been arrested, call our 24/7 line now: <a href="tel:+16175550199">(617) 555-0199</a>.'},
+    other:{t:'We may not be the right firm',p:'We don\u2019t handle personal injury, immigration, bankruptcy, patent or tax controversy matters. The Massachusetts Bar Association Lawyer Referral Service can help you find someone who does.'}
+  };
+  var btns=document.querySelectorAll('#finder-opts button'),ans=document.getElementById('finder-answer');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      var d=data[b.dataset.k];
+      ans.classList.remove('show');void ans.offsetWidth;ans.classList.add('show');
+      ans.innerHTML='<h3>'+d.t+'</h3><p>'+d.p+'</p>'+(b.dataset.k!=='other'?'<p style="margin-top:10px"><a href="#contact">Book a consultation</a></p>':'');
+      var sel=document.getElementById('f-area');
+      if(b.dataset.k!=='other'){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===d.t){sel.selectedIndex=i;}}}
+    });
+  });
+
+  // Contact form (static: no data is sent)
+  var form=document.getElementById('contact-form'),msg=document.getElementById('form-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('f-name').value.trim(),email=document.getElementById('f-email').value.trim(),ack=document.getElementById('f-ack').checked;
+    if(!name||!email||email.indexOf('@')<1){msg.textContent='Add your full name and a valid email address so we can reply.';msg.classList.add('show');return;}
+    if(!ack){msg.textContent='Check the acknowledgment box to send your request.';msg.classList.add('show');return;}
+    msg.textContent='Request sent. An intake coordinator will reply to '+email+' within one business day.';
+    msg.classList.add('show');form.reset();
+  });
+})();
+</script>
+
+<!-- Paste your Website AI Assistant embed script here, just before </body> -->
+</body>
+</html>
